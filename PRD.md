@@ -200,8 +200,10 @@ These are **not** national holidays by law, but many companies and banks close. 
 |---|---|
 | Carnaval (segunda-feira) | Easter − 48 days |
 | Carnaval (terça-feira) | Easter − 47 days |
-| Quarta-feira de Cinzas (until 14h) | Easter − 46 days (if excluded, treat as a full non-business day and say so) |
+| Quarta-feira de Cinzas (until 14h) | Easter − 46 days. Keep it as a business day because it is only a half-day optional point; show it as an informational note in results. |
 | Corpus Christi | Easter + 60 days |
+
+The "exclude optional points" option excludes only Carnaval Monday, Carnaval Tuesday and Corpus Christi as full non-business days. Ash Wednesday never reduces the business-day count.
 
 Note for the content: the Brazilian financial market calendar (ANBIMA) **does** treat Carnaval Monday/Tuesday and Corpus Christi as bank holidays. Explain this difference on the holiday pages.
 
@@ -237,7 +239,7 @@ daysBetween(start, end, { includeEnd })                         -> number
 normalizeRange(start, end)                                      -> { start, end, swapped }
 businessDaysBetween(start, end, { countStart, saturdayIsBusiness, excludeOptional }) -> { count, holidays[], weekendDays }
 addDays(start, n)                                               -> date
-addBusinessDays(start, n, { countStart, saturdayIsBusiness, excludeOptional }) -> { date, skippedHolidays[], skippedWeekendDays }
+addBusinessDays(start, n, { countStart, saturdayIsBusiness, excludeOptional }) -> { date, skippedHolidays[], informationalHolidays[], skippedWeekendDays }
 daysUntil(target, today)                                        -> number   (negative if past)
 holidaysForYear(year, { includeOptional })                      -> holiday[]
 businessDaysInMonth(year, month, options)                       -> { count, holidays[] }
