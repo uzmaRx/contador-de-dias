@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Test and coverage output
+coverage/
+
+# Build output (reserved for later phases)
+dist/
+.astro/
+
+# Secrets and local environment configuration
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
